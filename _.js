@@ -20,11 +20,11 @@ const _ = {
     return isInRange
   },
   words (string) {
-
+    return string.split(' ')
   }
 };
 
-_.inRange(3, 2, 1)
+console.log(_.words('hi ho'))
 
 
 // Do not write or modify code below this line.
