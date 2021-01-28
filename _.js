@@ -21,10 +21,11 @@ const _ = {
   },
   words (string) {
     return string.split(' ')
+  },
+  pad (string, length) {
+
   }
 };
-
-console.log(_.words('hi ho'))
 
 
 // Do not write or modify code below this line.
