@@ -18,6 +18,9 @@ const _ = {
     }
     const isInRange = ((start <= number) && (number < end));
     return isInRange
+  },
+  words (string) {
+
   }
 };
 
