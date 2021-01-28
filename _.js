@@ -1,6 +1,12 @@
 const _ = {
-  
+  clamp (number, lowerBound, upperBound) {
+    const lowerClampedValue = Math.max(number, lowerBound);
+    
+    const clampedValue = Math.min(lowerClampedValue, upperBound)
+    return clampedValue
+  }
 };
+
 
 
 
