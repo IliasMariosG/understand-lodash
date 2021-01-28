@@ -22,11 +22,14 @@ const _ = {
   words (string) {
     return string.split(' ')
   },
-  pad (string, length) {
-
+  pad (string, targetLength) {
+    if (targetLength < string.length) {
+      return string
+    }
   }
-};
+}
 
+//console.log(_.pad('hello', 4))
 
 // Do not write or modify code below this line.
 module.exports = _;
