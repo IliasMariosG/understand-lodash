@@ -26,10 +26,19 @@ const _ = {
     if (targetLength < string.length) {
       return string
     }
+    var paddingDifference = Math.abs(string.length - targetLength);
+    if (paddingDifference % 2 == 0) {
+      var text = '';
+      const toLeft = ' '.repeat(paddingDifference / 2)
+      const toRight = ' '.repeat(paddingDifference / 2)
+      text += toLeft + string + toRight
+      
+      return text
+    }
   }
 }
 
-//console.log(_.pad('hello', 4))
+console.log(_.pad('hellos', 14))
 
 // Do not write or modify code below this line.
 module.exports = _;
