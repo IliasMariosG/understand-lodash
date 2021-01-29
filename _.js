@@ -44,13 +44,17 @@ const _ = {
   },
   has (object, key) {
     return key in object;
+  },
+  invert (object) {
+    const invertedObject = {};
+      for (var key in object) {
+        invertedObject[object[key]] = key
+    }
+    return invertedObject
   }
 }
 
-// console.log(_.has({'call': 123}, 'call'))
-// logs true
-//console.log(_.has({'call': 123}, 'mail'))
-// logs false
+console.log(_.invert({'call': 123, 'speak': 'George', 'play': 'piano'}))
 
 // Do not write or modify code below this line.
 module.exports = _;
