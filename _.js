@@ -41,8 +41,16 @@ const _ = {
       
       return text
     }
+  },
+  has (object, key) {
+    return key in object;
   }
 }
+
+// console.log(_.has({'call': 123}, 'call'))
+// logs true
+//console.log(_.has({'call': 123}, 'mail'))
+// logs false
 
 // Do not write or modify code below this line.
 module.exports = _;
