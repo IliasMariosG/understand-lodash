@@ -62,17 +62,27 @@ const _ = {
     return undefined
   },
   drop (array, number) {
-    console.log(number)
     if (!number) {
       number = 1;
     }
+    //let droppedArray = array.slice(number, array.length);
     for (i=0; i < number; i++) {
       array.shift()
     }
+    //return droppedArray
     return array
-  }
-}
+  },
 
-console.log(_.drop([1,2,3]))
+  dropWhile (array, predicate) {
+    const cb =  (element, index) => {
+      return !predicate(element, index, array);
+    };
+    let dropNumber = array.findIndex(cb);
+    let droppedWhileArray = this.drop(array, dropNumber);
+    return droppedWhileArray;
+  }
+
+};
+
 // Do not write or modify code below this line.
 module.exports = _;
