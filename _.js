@@ -61,6 +61,12 @@ const _ = {
     };
     return undefined
   },
+  drop (array, number) {
+    for (i=0; i < number; i++) {
+      array.shift()
+    }
+    return array
+  }
 }
 
 // Do not write or modify code below this line.
