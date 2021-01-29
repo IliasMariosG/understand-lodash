@@ -51,10 +51,17 @@ const _ = {
         invertedObject[object[key]] = key
     }
     return invertedObject
-  }
+  },
+  findKey (object, predicate) {
+    for (let key in object) {
+      let predicateValue = predicate(object[key]);
+      if (predicateValue) {
+        return key;
+      };
+    };
+    return undefined
+  },
 }
-
-console.log(_.invert({'call': 123, 'speak': 'George', 'play': 'piano'}))
 
 // Do not write or modify code below this line.
 module.exports = _;
