@@ -80,9 +80,21 @@ const _ = {
     let dropNumber = array.findIndex(cb);
     let droppedWhileArray = this.drop(array, dropNumber);
     return droppedWhileArray;
+  },
+
+  chunk (array, size) {
+    if (!size) {
+      size = 1;
+    };
+    let chunkedArray = [];
+    for (i=0; i<array.length;i+= size) {
+      let slicedArray = array.slice(i, i + size)
+      chunkedArray.push(slicedArray)
+    }
+    return chunkedArray
   }
 
 };
-
+console.log(_.chunk([1,2,3,4]))
 // Do not write or modify code below this line.
 module.exports = _;
