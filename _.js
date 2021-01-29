@@ -62,6 +62,10 @@ const _ = {
     return undefined
   },
   drop (array, number) {
+    console.log(number)
+    if (!number) {
+      number = 1;
+    }
     for (i=0; i < number; i++) {
       array.shift()
     }
@@ -69,5 +73,6 @@ const _ = {
   }
 }
 
+console.log(_.drop([1,2,3]))
 // Do not write or modify code below this line.
 module.exports = _;
